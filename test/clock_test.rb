@@ -43,4 +43,8 @@ describe "clock" do
     time = clock(11, 14, 8);
     expect(time).must_equal "11:14:08"
   end
+
+  it "will raise an error when given negative inputs" do
+    expect{clock(11, -2, 14)}.must_raise ArgumentError
+  end
 end
